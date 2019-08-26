@@ -1,0 +1,24 @@
+meta:
+  title: "怖くない関数型入門"
+  sns:
+    - twitter
+slide:
+  loop: false
+  sidebar: true
+  targetBlank: true
+  showIndex: true
+  isVertical: false
+  code:
+    languages:
+      - javascript
+      - typescript
+    plugins: []
+    theme: default
+  chart: false
+  math: false
+extends:
+  js:
+  css: ./style.css
+  webpack:
+build:
+  ssr: true
