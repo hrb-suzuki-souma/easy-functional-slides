@@ -37,7 +37,58 @@ doSomething(a => btoc(atob(a)))
 
 ---
 
-# 
+# 型の取り回し方 
+
+---
+
+## 型は合成できる
+
+`A -> B` `B -> C` から `A -> C` を作れる
+
+---
+
+## 関数合成
+
+```haskell
+atob :: a -> b
+btoc :: b -> c
+
+atoc a = a $ atob $ btoc
+```
+
+```elixir
+atob = fn (a) -> # ...
+btoc = fn (b) -> # ...
+
+atoc = fn (a) -> a |> atob |> btoc
+```
+
+関数合成に対応してる言語が少ない😢
+
+```typescript
+const atoc = a => btoc(atob(a))
+```
+
+カッコをたくさんつけるの見づらい
+
+---
+
+## ヘルパー関数を作ろう
+
+```typescript
+const compose = (...fns) => (arg) => fns.reduceRight((acc, f) => f(acc), arg)
+```
+
+---
+
+## こう使える
+
+```typescript
+const atoc = compose(
+    btoc,
+    atob
+)
+```
 
 ---
 

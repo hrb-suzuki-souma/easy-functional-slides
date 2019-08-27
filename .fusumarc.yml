@@ -1,5 +1,5 @@
 meta:
-  title: "怖くない関数型入門"
+  title: '怖くない関数型入門'
   sns:
     - twitter
 slide:
@@ -12,6 +12,9 @@ slide:
     languages:
       - javascript
       - typescript
+      - haskell
+      - rust
+      - elixir
     plugins: []
     theme: default
   chart: false
