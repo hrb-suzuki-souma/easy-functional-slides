@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "fusuma start"
+    "start": "fusuma start",
+    "build": "fusuma build"
   },
   "dependencies": {
     "fusuma": "^1.14.2"
